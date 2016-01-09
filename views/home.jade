@@ -1,0 +1,18 @@
+extends layout
+
+block content
+   if !(schools && schools.length)
+      p Nothing to see here. Move along...
+      a(href="/school/create") Create a School
+   else
+      ul.schools
+         each school in schools
+            .row
+               .col.s12.m6
+                  .card.blue-grey.darken-1
+                     .card-content.white-text
+                        span.card-title= school.schoolName
+                        p= school.type
+                     .card-action
+                        a(href="/school/#{school.id}")= school.schoolName
+      a(href="/school/create") Create a School

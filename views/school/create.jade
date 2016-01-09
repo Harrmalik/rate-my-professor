@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+   form.col.s12(method="post", action="/school/create")
+      .row
+         .input-field.col.s6
+            input#name(name="name", type="text")
+            label(for="name") School Name
+
+         .input-field.col.s6
+            input#type(name="type", type="text")
+            label(for="type") Type
+      .row
+         .input-field.col.s6
+            input#street(name="street", type="text")
+            label(for="street") Street
+
+         .input-field.col.s6
+            input#zip(name="zip", type="text")
+            label(for="zip") Zip
+      .row
+         .input-field.col.s6
+            input#state(name="state", type="text")
+            label(for="state") State
+      .row
+         input.waves-effect.waves-light.btn(type="submit", value="Add")

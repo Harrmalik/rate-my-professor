@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+   p= school.type
+   p= school.street
+   hr
+   if !(school.professors)
+      p No Professors yet
+      a(href="/school/#{school.id}/addteacher") Add a Professor
+   else
+      ul.collection.with-header
+         li.collection-header
+            p Professors
+         each teacher,index in school.professors
+            li.collection-item
+               a(href="/school/#{school.id}/teacher/#{index}")= teacher.name
+      a(href="/school/#{school.id}/addteacher") Add a Professor

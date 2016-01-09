@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+   if !(teacher.comments)
+      p No Comments Yet
+      form.col.s12(method="post")
+         .row
+            .input-field.col.s6
+               input#comment(name="comment", type="text")
+               label(for="comment") Comment
+
+            .input-field.col.s6
+               input#rating(name="rating", type="range", min="0", max="5")
+               input#commentid(value="#{teacher[id]._id}", hidden)
+         .row
+            input.waves-effect.waves-light.btn(type="submit", value="Add a Comment")

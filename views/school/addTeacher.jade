@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+   form.col.s12(method="post", action="/school/#{id}/addteacher")
+      .row
+         .input-field.col.s6
+            input#name(name="name", type="text")
+            label(for="name") Professor Name
+
+         .input-field.col.s6
+            input#major(name="major", type="text")
+            label(for="major") major
+      .row
+         input.waves-effect.waves-light.btn(type="submit", value="Add")

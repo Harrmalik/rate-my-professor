@@ -1,0 +1,49 @@
+html5
+html
+   head
+      title= pageTitle
+      meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0")
+      link(type='text/css', rel='stylesheet', href="https://fonts.googleapis.com/icon?family=Material+Icons")
+      link(type='text/css', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css')
+   body
+      nav(role="navigation").light-blue.lighten-1
+         .nav-wrapper.container
+            a#logo-container.brand-logo(href="/") Rate My Professor
+         ul.right.hide-on-med-and-down
+            li
+               a(href="/schools") Schools
+            li geyt
+         ul#nav-mobile.side-nav
+            li
+               a(href="/schools") Schools
+         a(href="#", data-activates="nav-mobile", class="button-collapse") i.material-icons menu
+      header
+         h1= pageTitle
+      section.content
+         block content
+      footer.page-footer.green
+         .container
+            .row
+               .col.16.s12
+                  h5.white-text Company Bio
+                  p.grey-text.text-lighten-4 We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+               .col.13.s12
+                  h5.white-text Links
+                  ul
+                     li
+                        a(class="white-text", href="/") Home
+                     li
+                        a(class="white-text", href="/schools") Schools
+         .footer-copyright
+            .container Made by
+               a(class="orange-text text-lighten-3", href="http://malikharrison.com")  Malik Harrison
+      script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.1.min.js")
+      script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js')
+      script(type="text/javascript").
+         (function($){
+           $(function(){
+
+             $('.button-collapse').sideNav();
+
+           }); // end of document ready
+         })(jQuery); // end of jQuery name space
